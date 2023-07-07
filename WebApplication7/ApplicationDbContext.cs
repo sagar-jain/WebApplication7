@@ -15,8 +15,5 @@ public class ApplicationDbContext : DbContext
 
 
 
-    // public DbSet<Product> Products { get; set; }
-    // Add other DbSet properties for other entities
-
-    // Override OnModelCreating method if you need to configure entity relationships or other configurations
+   
 }

@@ -11,7 +11,6 @@ namespace WebApplication7.Repository
         {
             void Add(User user);
             bool Exists(string username);
-            // Other methods for user-related operations
         }
     
 }

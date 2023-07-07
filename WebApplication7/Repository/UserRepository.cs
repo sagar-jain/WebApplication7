@@ -27,7 +27,6 @@ namespace WebApplication7.Repository
                 return _dbContext.Users.Any(u => u.Username == username);
             }
 
-            // Other implementations of IUserRepository methods
         }
     
 }

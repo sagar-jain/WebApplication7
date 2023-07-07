@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +11,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { SignUpComponent } from './signup/signup.component';
 import { CategorylistComponent } from './categorylist/categorylist.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductlistComponent } from './productlist/productlist.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FetchDataComponent,
     SignUpComponent,
     CategorylistComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,10 +31,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: SignUpComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'categories', component: CategorylistComponent },
+      { path: 'products', component: ProductlistComponent },
     ])
+
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

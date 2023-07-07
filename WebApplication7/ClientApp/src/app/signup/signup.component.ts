@@ -37,12 +37,13 @@ export class SignUpComponent {
       .signUp(this.username.value, this.password.value)
       .subscribe(
         () => {
-          // Signup successful, navigate to the desired page
           this.router.navigate(['/dashboard']);
         },
         (error) => {
           // Handle signup error
           console.log(error);
+          this.router.navigate(['/dashboard']);
+
         }
       );
   }
